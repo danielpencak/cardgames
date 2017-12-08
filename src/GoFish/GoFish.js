@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
+import './GoFish.css';
+import logic from './gofishlogic';
 
 export default class GoFish extends Component {
+  componentDidMount() {
+    logic();
+  }
+  componentDidUpdate() {
+    logic();
+  }
   render() {
     return (
       <div className="GoFish">
@@ -26,7 +34,7 @@ export default class GoFish extends Component {
       <div>
         <div id="game">
           {/* Deck and Go Fish! button */}
-          {/* <img alt="Deck of Cards" className="responsive-img" id="deck" src={cardBack} /> */}
+          <img alt="Deck of Cards" className="responsive-img" id="deck" src={require('./Assets/card_back.jpg')} />
           <a className="waves-effect btn z-depth-5" id="goFish">
             GO FISH!
           </a>
