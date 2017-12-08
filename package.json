@@ -1,14 +1,38 @@
 {
-  "name": "cardgames",
+  "name": "PickACard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.17.1",
+    "bcrypt-as-promised": "^1.1.0",
+    "body-parser": "^1.18.2",
+    "boom": "^7.1.1",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "express-validation": "^1.0.2",
+    "humps": "^2.0.1",
+    "joi": "^13.0.2",
+    "jsonwebtoken": "^8.1.0",
+    "knex": "^0.14.2",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.12.5",
+    "pg": "^7.4.0",
     "react": "^16.2.0",
+    "react-bootstrap": "^0.31.5",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17"
+    "react-router": "^4.2.0",
+    "react-scripts": "1.0.17",
+    "react-validation": "^3.0.7",
+    "validator": "^9.1.2"
   },
+  "engines": {
+    "node": "8.9.1"
+  },
+  "proxy": "http://localhost:3001",
   "scripts": {
-    "start": "react-scripts start",
+    "knex": "knex",
+    "start": "react-scripts start & nodemon --watch server/ server/bin/www",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
